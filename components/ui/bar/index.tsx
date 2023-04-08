@@ -1,4 +1,3 @@
-// components/PercentageBar.tsx
 import React from 'react';
 
 interface PercentageBarProps {
@@ -27,7 +26,7 @@ const PercentageBar: React.FC<PercentageBarProps> = ({
         style={{ width: `${redWidth}%` }}
       />
       <div
-        className="bg-slate-250 rounded-r"
+        className="bg-slate-200 rounded-r"
         style={{ width: `${grayWidth}%` }}
       />
     </div>

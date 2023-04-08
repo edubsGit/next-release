@@ -6,6 +6,11 @@ module.exports = {
   content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        'slate-250': '#D1DCEB',
+        'red-250': '#FDBBBB',
+        'green-250': '#9DF3BC',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

@@ -1,0 +1,47 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  email String @unique
+  password String
+  reactions Json @default("{}")
+  likes String[] @default([])
+  dislikes String[] @default([])
+  desnecessarios String[] @default([])
+  name String?
+}
+
+model deputados {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  id_  Int    @map("id") @unique
+  nome String
+  leisTodas leis[]
+}
+
+model leis {
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  autor        Int
+  cod_situacao Int
+  date         String
+  id_camara    Int    @unique
+  inteiro_teor String
+  polemica     Float
+  resumo       String
+  titulo       String
+  twitter      Float
+  score        Float
+  likes Int @default(0)
+  dislikes Int @default(0)
+  desnecessarios Int @default(0)
+  autorNome    deputados @relation(fields: [autor], references: [id_])
+}

@@ -1,5 +1,5 @@
 export default async function unReactionunction(idLei: string, type: string) {
-  const res = await fetch('http://localhost:3000/api/unreactpost?id=' + idLei + '&type=' + type, {
+  const res = await fetch(`${window.location.origin}/api/reactpost?id=${idLei}&type=${type}`, {
     method: 'PUT'
   })
 

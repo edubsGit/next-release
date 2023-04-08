@@ -31,7 +31,7 @@ const LoginForm = () => {
         router.push(callbackUrl)
       }
       else {
-        setError('Invalid email or password')
+        setError('Email ou senha inválidos')
       }
     } catch(err) {}
   }
@@ -48,7 +48,7 @@ const LoginForm = () => {
           id="email" />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="password">Password</Label>
+        <Label htmlFor="password">Senha</Label>
         <Input
           value={password}
           required

@@ -48,7 +48,7 @@ const RegisterForm = () => {
           id="email" />
       </div>
       <div className="grid w-full items-center gap-1.5">
-        <Label htmlFor="password">Password</Label>
+        <Label htmlFor="password">Senha</Label>
         <Input
           value={password}
           required
@@ -58,7 +58,7 @@ const RegisterForm = () => {
       </div>
       {error && <Alert>{error}</Alert>}
       <div className="w-full">
-        <Button className="w-full" size='lg'>Register</Button>
+        <Button className="w-full" size='lg'>Criar conta</Button>
       </div>
     </form>
   )

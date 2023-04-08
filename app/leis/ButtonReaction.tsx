@@ -155,7 +155,7 @@ const ButtonReaction = ({idLei, reactionStart, likeCountStart, dislikeCountStart
   let grayPercentage = unnecessaryCount / totalReactions
 
   return (
-    <div className="">
+    <div>
       <div>
         {totalReactions >= 10 && <PercentageBar greenPercentage={greenPercentage} redPercentage={redPercentage} grayPercentage={grayPercentage}></PercentageBar>}
       </div>

@@ -1,5 +1,4 @@
 import NextAuth, { NextAuthOptions } from "next-auth"
-import GithubProvider from "next-auth/providers/github"
 import { compare } from 'bcrypt'
 import CredentialsProvider from 'next-auth/providers/credentials'
 import { prisma } from "@/lib/prisma/prisma"
@@ -49,15 +48,10 @@ export const authOptions: NextAuthOptions = {
         return {
           id: user.id + '',
           email: user.email,
-          name: user.name,
-          randomKey: 'Hey cool'
+          name: user.name
         }
       }
-    }),
-    GithubProvider({
-      clientId: process.env.GITHUB_ID || '',
-      clientSecret: process.env.GITHUB_SECRET || '',
-    }),
+    })
   ],
 }
 

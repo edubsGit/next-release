@@ -1,20 +1,15 @@
-import { getServerSession } from "next-auth"
-import { LoginButton, LogoutButton } from "./auth"
 import LeisComponent from "./leis/LeisComponent"
 import Link from "next/link"
-import { authOptions } from "@/pages/api/auth/[...nextauth]"
+import Navbar from "@/components/ui/navbar"
 
 export default async function Home() {
 
   return (
-    <>
-      <LoginButton />
-      <LogoutButton />
-      <Link href='/register'>Register</Link>
-      <main>
-        MAIN PAGE
-      </main>
-      <LeisComponent />
-    </>
+    <div>
+      <div className="px-5 sm:px-20 md:px-64 lg:px-96 space-y-4">
+        <Navbar className="h-12 mt-4"/>
+        <LeisComponent />
+      </div>
+    </div>
   )
 }

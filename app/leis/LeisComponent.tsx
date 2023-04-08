@@ -2,7 +2,6 @@ import ButtonReaction from "./ButtonReaction";
 import Link from "next/link";
 import ImageProfile from "@/components/ui/image";
 import Comments from "@/components/ui/comments";
-import PercentageBar from "@/components/ui/bar";
 import { getLeis } from "@/lib/prisma/getLeis";
 
 interface AutorNome {
@@ -28,7 +27,7 @@ export default (async function LeisComponent() {
     <div>
       {leis.map((item: any) => (
         <div key={item.id}>
-          <div className="px-5 sm:px-20 md:px-64 lg:px-96">
+          <div>
             <div className="flex flex-row gap-4">
               <div className="flex-1">
                 <Link href={item.inteiro_teor} target="_blank" className="text-xl font-semibold">{item.titulo}</Link>
@@ -47,7 +46,7 @@ export default (async function LeisComponent() {
               <Comments />
             </div>
           </div>
-          <div className="px-0 md:px-64 lg:px-96">
+          <div>
             <div className="h-0.5 bg-gray-100 mb-10 mt-10"></div>
           </div>
         </div>

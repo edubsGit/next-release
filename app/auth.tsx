@@ -2,10 +2,12 @@
 
 import { signIn, signOut } from "next-auth/react"
 
-export const LoginButton = () => {
+const LoginButton = () => {
   return <button onClick={() => signIn()}>Login</button>
 }
 
-export const LogoutButton = () => {
+const LogoutButton = () => {
   return <button onClick={() => signOut()}>Logout</button>
 }
+
+export {LoginButton, LogoutButton}

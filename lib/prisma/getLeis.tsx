@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import { prisma } from "./prisma";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import { Prisma } from "@prisma/client";
 
 export async function getLeis() {
   try {
@@ -42,7 +43,7 @@ export async function getLeis() {
 
         if(user) {
           const leisWithReaction = leis.map((lei) => {
-            const userReaction = user.reactions[lei.id];
+            const userReaction= user?.reactions[lei.id];
             return {
               ...lei,
               reaction: userReaction || null,

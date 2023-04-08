@@ -43,8 +43,8 @@ export async function PUT(request: Request) {
   const reactionObj = user.reactions as Prisma.JsonObject | object;
   const currentReaction = (reactionObj as any)[idLei];
 
-  const existingReactions: Record<string, string> = user.reactions as Record<string, string> || {};
-  const updatedReactions: ReactionsType = { ...existingReactions, [idLei]: type };
+  const existingReactions: Prisma.JsonValue = user.reactions;
+  const updatedReactions = { ...existingReactions as Prisma.JsonObject, [idLei]: type };
 
   if (currentReaction) {
     if (currentReaction == type) {

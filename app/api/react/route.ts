@@ -40,7 +40,7 @@ export async function PUT(request: Request) {
     return new NextResponse('user not found', {status: 404})
   }
 
-  const reactionObj = user.reactions as Prisma.JsonObject | object;
+  const reactionObj = user?.reactions as Prisma.JsonObject | object;
   const currentReaction = (reactionObj as any)[idLei];
 
   const existingReactions: Prisma.JsonValue = user.reactions;

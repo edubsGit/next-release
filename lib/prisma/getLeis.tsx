@@ -43,10 +43,11 @@ export async function getLeis() {
 
         if(user) {
           const leisWithReaction = leis.map((lei) => {
-            const userReaction= user?.reactions[lei.id];
+            const reactionObj = user?.reactions as Prisma.JsonObject | object;
+            const currentReaction = (reactionObj as any)[lei.id];
             return {
               ...lei,
-              reaction: userReaction || null,
+              reaction: currentReaction || null,
             };
           });
           return leisWithReaction

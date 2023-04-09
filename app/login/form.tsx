@@ -37,7 +37,7 @@ const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-6 w-full sm:w-[400px]">
+    <form onSubmit={onSubmit} className="space-y-6 min-w-[280px] sm:w-[400px]">
       <div className="grid w-full items-center gap-1.5">
         <Label htmlFor="email">Email</Label>
         <Input 

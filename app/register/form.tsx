@@ -54,16 +54,16 @@ const RegisterForm = () => {
   }
 
   return (
-    <form onSubmit={onSubmit} className="space-y-6 w-full sm:w-[400px]">
-    <div className="grid w-full items-center gap-1.5">
-      <Label htmlFor="text">Nome e sobrenome</Label>
-      <Input 
-        value={name}
-        required
-        onChange={(e) => {setName(e.target.value)}}
-        type="text" 
-        id="name" />
-    </div>
+    <form onSubmit={onSubmit} className="space-y-6 min-w-[280px] sm:w-[400px]">
+      <div className="grid w-full items-center gap-1.5">
+        <Label htmlFor="text">Nome e sobrenome</Label>
+        <Input 
+          value={name}
+          required
+          onChange={(e) => {setName(e.target.value)}}
+          type="text" 
+          id="name" />
+      </div>
       <div className="grid w-full items-center gap-1.5">
         <Label htmlFor="email">Email</Label>
         <Input 

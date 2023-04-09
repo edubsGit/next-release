@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function RegisterPage() {
   return (
-    <div className="h-screen w-screen flex justify-center items-center bg-white sm:bg-gray-100">
+    <div className="sm:h-screen sm:w-screen flex justify-center items-center bg-white sm:bg-gray-100">
       <div className="sm:shadow-xl px-8 pb-8 pt-8 sm:bg-white rounded-xl space-y-8">
         <div>
           <div className="inline-block w-auto mb-10">

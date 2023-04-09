@@ -15,9 +15,6 @@ model User {
   email String @unique
   password String
   reactions Json @default("{}")
-  likes String[] @default([])
-  dislikes String[] @default([])
-  desnecessarios String[] @default([])
   name String?
 }
 

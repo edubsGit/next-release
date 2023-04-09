@@ -4,6 +4,7 @@ import Providers from './providers'
 export const metadata = {
   title: 'Lei Aberta',
   description: 'Lei Aberta',
+  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 }
 
 export default function RootLayout({

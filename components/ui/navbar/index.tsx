@@ -18,8 +18,9 @@ const Navbar: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
       <div className="flex justify-between items-center">
-        <Link href='/'>
-          <Image src='/logo/logo.png' alt='logo' width={40} height={40}/>
+        <Link href='/' className="flex items-center space-x-1.5">
+          <Image src='/logo/logo.png' alt='logo' width={25} height={25}/>
+          <h1 className="font-semibold text-lg">Lei Aberta</h1>
         </Link>
         <div className="flex justify-end gap-4">
           {status == 'authenticated' ? 

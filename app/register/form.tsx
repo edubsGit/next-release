@@ -60,7 +60,8 @@ const RegisterForm = () => {
         <Input 
           value={name}
           required
-          onChange={(e) => {setName(e.target.value)}}
+          onChange={(e) => {setName(e.target.value)
+            setError('')}}
           type="text" 
           id="name" />
       </div>
@@ -69,7 +70,8 @@ const RegisterForm = () => {
         <Input 
           value={email}
           required
-          onChange={(e) => {setEmail(e.target.value)}}
+          onChange={(e) => {setEmail(e.target.value)
+            setError('')}}
           type="email" 
           id="email" />
       </div>
@@ -78,7 +80,8 @@ const RegisterForm = () => {
         <Input
           value={password}
           required
-          onChange={(e) => {setPassword(e.target.value)}}
+          onChange={(e) => {setPassword(e.target.value)
+            setError('')}}
           type="password" 
           id="password" />
       </div>

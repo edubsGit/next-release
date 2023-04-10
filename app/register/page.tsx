@@ -1,8 +1,14 @@
+'use client'
+
 import Link from "next/link";
 import RegisterForm from "./form";
 import Image from "next/image";
+import { useEffect } from "react";
 
-export default function RegisterPage() {
+const RegisterPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="sm:h-screen sm:w-screen flex justify-center items-center bg-white sm:bg-gray-100">
       <div className="sm:shadow-xl px-8 pb-8 pt-8 sm:bg-white rounded-xl space-y-8">
@@ -21,3 +27,5 @@ export default function RegisterPage() {
     </div>
   )
 }
+
+export default RegisterPage

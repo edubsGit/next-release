@@ -43,7 +43,8 @@ const LoginForm = () => {
         <Input 
           value={email}
           required
-          onChange={(e) => {setEmail(e.target.value)}}
+          onChange={(e) => {setEmail(e.target.value)
+            setError('')}}
           type="email" 
           id="email" />
       </div>
@@ -52,7 +53,8 @@ const LoginForm = () => {
         <Input
           value={password}
           required
-          onChange={(e) => {setPassword(e.target.value)}}
+          onChange={(e) => {setPassword(e.target.value)
+            setError('')}}
           type="password" 
           id="password" />
       </div>
